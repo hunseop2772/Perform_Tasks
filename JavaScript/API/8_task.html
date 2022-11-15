@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+    <script>
+     
+                function fetchAPI(){ //비동기로 데이터를 
+                  return  fetch('http://apis.data.go.kr/6450000/crosswalks/getcrosswalks?serviceKey=UKOwWA8OXXVdPpzqut%2FI2GyDUaonejYRuw6lAIvuLQlf5Drli9fbgmtGiCOi7mBlGz6Vx6W15%2F%2F0vUu6c9QWrg%3D%3D&type=json%20&sortKey=roadNm&filterKey=roadNm&filterValues=%EC%83%88%EB%A7%8C%EA%B8%88%EB%B6%81%EB%A1%9C&numOfRows=10&pageNo=0')
+                  .then((response)=> response.json())
+                  .then((data)=> data);
+                }
+                
+                fetchAPI().then((datas) => {
+                    console.log(datas.items);
+                    showDatas(datas.items)
+                })
+                function showDatas(datas){
+                    const ulElement = document.querySelector('#items')
+                    ulElement.innerHTML = datas.map((data) => setLiElement(data) ).join('<br>')
+                }
+                function setLiElement(data){
+                    return `<li>crslkNo:${data.crslkNo} ctprvnNm :${data.ctprvnNm}signguNm :${data.signguNm}roadNm:${data.roadNm} lnmadr:${data.lnmadr} latitude :${data.latitude}institutionNm :${data.institutionNm}referenceDate:${data.referenceDate}</li>`;
+                }
+                
+//	전라북도 공공데이터 API - 전라북도_새마금북로_횡단보도 현황.docx
+
+    </script>
+
+    <style>
+        #items{
+            
+            font-size: 30px;
+            list-style: none;
+            border: solid 3px black;
+            text-align: center;
+            padding: 80px;
+        }
+        
+    </style>
+</head>
+<body>
+        <h1>전라북도 공공데이터 API - 전라북도_새마금북로_횡단보도 현황</h1>
+        <img src="./전라북도-군산시-새만금북로-99-오식도동.htm" alt="sdf">
+        <ul id="items">
+       
+        </ul>
+      
+        
+</body>
+</html>
