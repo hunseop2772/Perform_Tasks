@@ -65,7 +65,7 @@ public class login_ok extends HttpServlet {
     	try{
     		conn = Dbconn.getConnection();
     		if(conn != null){
-    			String sql = "select mem_idx, mem_name from tb_member where mem_userid=? and mem_userpw=?";
+    			String sql = "select mem_idx, mem_name from tb_member where mem_userid=? and mem_userpw=sha2(?,256)";
     			pstmt = ((java.sql.Connection) conn).prepareStatement(sql);
     			pstmt.setString(1, userid);
     			pstmt.setString(2, userpw);
@@ -85,5 +85,6 @@ public class login_ok extends HttpServlet {
 	}
 		
 	}
+
 
 
