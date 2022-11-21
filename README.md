@@ -15,6 +15,7 @@ purpose : 과제 및 시험 복습/수정
 * chating-server - 채팅 프로그램
 * ScoreManagement - 성적관리 기록부
 * Voca - 영어 단어장
+* loginServer - jsp를 이용한 로그인 및 회원가입 서버 구현
 -------------------
 ### 2. JavaScript
 * loginPage - 로그인 조건 및 주소 확인
