@@ -22,6 +22,7 @@ purpose : 과제 및 시험 복습/수정
 * quize.html - 20개의 문제 랜덤 출제
 * rock.html - 가위바위보 문제
 * API - 전라북도 신호등 정보 
+* login-4task - 정규식을 이용한 로그인 
 -------------------
 ### 3. HTML, CSS
 * GitHub.test - 구 깃허브 홈페이지 반응형 구현
