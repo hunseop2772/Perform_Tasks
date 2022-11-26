@@ -1,0 +1,72 @@
+
+ 
+input[type=date]::-webkit-datetime-edit-text {
+  -webkit-appearance: none;
+  display: none;
+}
+input[type=date]::-webkit-datetime-edit-month-field{
+  -webkit-appearance: none;
+  display: none;
+}
+input[type=date]::-webkit-datetime-edit-day-field {
+  -webkit-appearance: none;
+  display: none;
+}
+input[type=date]::-webkit-datetime-edit-year-field {
+  -webkit-appearance: none;
+  display: none;
+}
+
+input{text-align: center;}
+
+
+div{
+  margin: 0, auto;
+  color: grey;
+  font-size: 12px;
+}
+
+#canvas {
+  width: 300px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+ #userid{margin-left: 100px;}
+ #userpw{margin-left: 85px;}
+ #userpw_re{margin-left: 48px;} 
+ #name{margin-left: 115px;} 
+ #char{margin-left: 115px;} 
+ #email{margin-left: 90px;} 
+ #date{margin-left: 80px;} 
+ #gender{margin-left: 110px;} 
+ #hp{margin-left: 80px;} 
+ #hp1{margin-left: 65px;} 
+ #sample6_postcode{margin-left: 110px;} 
+ /* #sample6_address{margin-left: 70px;}  */
+ #sample6_extraAddress{margin-left: 150px;} 
+ #sample6_detailAddress{margin-left: 150px;} 
+ #drawCanvas{margin-left: 110px;}
+ 
+ #hobby1{margin-left: 55px;}
+ #hobby2{margin-left: 48px;}
+ #hobby3{margin-left: 85px;} 
+
+ #rid{margin-left: 48px;}
+ 
+img{margin-left: 45px;}
+#b{
+  margin-left: 0, auto;
+  text-align: center;
+}
+
+#userpw{
+  text-align: center;
+  margin: 0, auto;
+} 
+
+body{
+  width: 700px;
+ margin: 0 auto;
+}
+

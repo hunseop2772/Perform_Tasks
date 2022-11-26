@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <script defer src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/31.1.0/classic/ckeditor.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+ 
+    
+    
+    <!-- 버튼작업인 submit 발생 경우 js 파일에서 sendit()함수를 실행하여 조건을 확인하는 부분 -->
+    <!-- 버튼 같은거는 서브밋 -->
+</head>
+<body>
+    <h2 style="display:inline ;">* 회원가입</h2><h4 style="display:inline ;color: red;"> - 아래 필수 입력사항을 모두 입력해 주십시요.</h4>
+    <hr style="background-color:  orange; height: 2px; border: 0;">
+    <form action="./regist.jsp" name="regform" id="regform" method="post" onsubmit="return sendit()">
+
+        <p>아이디 <input  type="text" name = "userid" id = "userid" maxlength="20"> 최소 3자이상 입력하세요.</span></p>
+        <div style="margin-left: 150px;">* 영문자, 숫자,_만 입력 가능, 최소 3자이상 입력하세요</div>
+        <hr>
+        <p>패스워드  <input type="password" name = "userpw" id = "userpw" maxlength="20"> </p>
+        <hr>
+        <p>패스워드 확인  <input type="password" name = "userpw_re" id = "userpw_re" maxlength="20"> </p>
+        <hr>
+        <p>이름  <input type="text" name="name" id="name"> *공백없이 한글만 입력 가능</p>
+        <hr>
+        <p>별명   <input type="text" name="char" id="char"></p>
+        <div style="margin-left: 150px;">*공백없이 한글, 영문, 숫자만 입력가능 (한글2자, 영문자 4자 이상) <br>
+        *별명을 바꾸시면 앞으로 60일 이내에는 변경할 수 없습니다.</div>
+        <hr>
+        <p>이메일 : <input type="text" name="email" id="email"></p>
+        <hr>
+        <p>생년월일 <input type="date" name="date" id="date"></p>
+        <hr>
+       <p>성별 <select name="gender" id="gender">
+            <option value="">선택하세요</option>
+            <option value="남자">남자</option>
+            <option value="여자">여자</option>
+        </select></p>
+        <hr>
+        <p>전화번호  <input type="text" name="hp" id="hp"></p>
+        <hr>
+        <p>핸드폰번호  <input type="text" name="hp1" id="hp1"></p>
+        <hr>
+        <p>주소 <input type="text" name="zipcode" maxlength="5" id="sample6_postcode"style="width: 100px;" >-<input type="text" name="address1" id="sample6_address" style="width: 100px;"><button onclick="sample6_execDaumPostcode()" type="button" >우편번호검색</button></p>
+        <p> <input type="text" name="address3" id="sample6_extraAddress" style="width: 400px;"></p>
+        <p> <input type="text" name="address2" id="sample6_detailAddress" style="width: 400px;"></p>
+        <hr>
+        <p>서명
+            <canvas id="drawCanvas" width="500" height="100" style=" position: relative; border: 1px solid #000;"></canvas>
+        </p>
+        <hr>
+       <p> 자기소개<div id="editor"></div>
+        <script >
+            ClassicEditor
+              .create( document.querySelector( '#editor' ) )
+              .catch( error => {
+                console.error( error );
+              } );
+          </script>
+      </p>
+
+<hr>
+        <p>메일링서비스  <input type="checkbox" id="hobby1" value="등산">정보 메일을 받습니다<p>
+            <hr>
+        <p>SMS 수신여부  <input type="checkbox" id="hobby2" value="등산">핸드폰 문자메세지를 받겠습니다.<p>
+            <hr>
+        <p>정보공개  <input type="checkbox" id="hobby3" value="등산">다른 분들이 나의 정보를 볼 수 있도록 합니다.<br>
+             <div style="margin-left: 150px;">정보공개를 바꾸시면 앞으로 0일 이내에는 변경이 안됩니다.</div><p>
+                <hr>
+            <p>추천인아이디  <input type="text" name = "rid" id = "rid" maxlength="20"> </p>
+            <hr>
+            <p>자동등록방지 <img src="캡처.PNG" style="height:50px ;"> <input type="text" name = "rid1" id = "rid1" maxlength="20">  *왼 쪽의 글자를 입력  </p>
+            <hr>
+       <!-- <p>주소 <input type="text" name="sample6_address"></p>
+       
+       <p>상세주소 <input type="text" name="sample6_detailAddress"></p>
+       <p>참고사항 <input type="text" name="sample6_extraAddress"></p> -->
+        <p id="b"><button  style="color: orangered ;text-align: center; width:200px;height:50px;font-size: 20px; background-color: orangered; color: white; border-radius: 5%;">확인</button></p>
+    </form>
+</body>
+</html>
